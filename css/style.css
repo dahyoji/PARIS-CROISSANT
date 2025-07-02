@@ -106,16 +106,18 @@
     position: absolute;
     inset: 0 0 0 0;
     background: #000;
-    opacity: 0.25;
+    opacity: 0.15;
 }
 
 
 .main_visual .main_visual_slide .itm .txt {
     position: absolute;
-    bottom: 200px;
-    left: 20%;
+    bottom: 30%;
+    left: 50%;
     transform: translate(-50%, -50%);
 
+    max-width: 1290px;
+    width: 100%;
     color: #fff;
     text-shadow: 0 0 4px #000;
 
@@ -326,11 +328,14 @@
     flex: 1;
 }
 
+
 .main_promotion .inner .itm img {
+
     width: 100%;
     height: 290px;
     object-fit: cover;
 }
+
 
 .main_promotion .inner .itm strong {
     display: block;
@@ -412,10 +417,10 @@
     top: 0;
     width: 40px;
     height: 40px;
-    border: 1px solid #ddd;
+
     border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+    background: #b5936f;
+
 }
 
 .main_product .arrows .prev {
@@ -495,9 +500,7 @@
     width: 40px;
     height: 40px;
 
-    background: rgb(0, 0, 0, 0.5);
-
-    color: #fff;
+    background: rgba(181, 147, 111, 0.7);
 
     opacity: 0;
     visibility: hidden;

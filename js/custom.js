@@ -2,8 +2,8 @@ $(function () {
     const main_visual_slide = new Swiper('.main_visual_slide', {
         loop: true,
         autoplay: true,
-        autoplaySpeed: 6000,
-        speed: 6000,
+        autoplaySpeed: 2500,
+        speed: 3000,
 
     });
 
@@ -18,7 +18,7 @@ $(function () {
     const MMS = new Swiper('.main_menu_slide', {
         loop: true,
         slidesPerView: 5,
-        spaceBetween: 80,
+        spaceBetween: 40,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
