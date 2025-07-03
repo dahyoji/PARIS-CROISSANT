@@ -15,29 +15,6 @@ $(function () {
         main_visual_slide.slideNext();
     });
 
-    const MMS = new Swiper('.main_menu_slide', {
-        loop: true,
-        slidesPerView: 5,
-        spaceBetween: 40,
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: false,
-        },
-
-        speed: 5000,
-    });
-
-    const main_product_slide = new Swiper('.main_product_slide', {
-        loop: true,
-        slidesPerView: 4,
-        spaceBetween: 30,
-
-        navigation: {
-            nextEl: '.main_product .next',
-            prevEl: '.main_product .prev',
-        },
-    });
-
     $('').on('click', function () {
         main_visual_slide.slidePrev();
     });
@@ -46,7 +23,48 @@ $(function () {
         main_visual_slide.slideNext();
     });
 
+
+    const MMS = new Swiper('.main_menu_slide', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 40,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+
+        speed: 5000,
+        breakpoints: {
+
+            769: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
+
+        },
+    });
+
+    const main_product_slide = new Swiper('.main_product_slide', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        breakpoints: {
+
+            769: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+
+        },
+        navigation: {
+            nextEl: '.main_product .next',
+            prevEl: '.main_product .prev',
+        },
+    });
+
+
 });
+
 
 $(function () {
     $('.to_top').on('click', function () {
