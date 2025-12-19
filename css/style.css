@@ -84,7 +84,9 @@
     background: #fff;
     color: #b5936f;
 }
-
+#header .mbtn{
+    display: none;
+}
 
 #header .utils {
     display: flex;
@@ -109,6 +111,10 @@
 
         height: 120px;
 
+        /*  */
+         margin: 0 20px;
+        height: 80px;
+
     }
 
     #header .hd_wrap h1 a {
@@ -124,64 +130,65 @@
 
     #header h1 img {}
 
-    #header .gnb {
-        /*  */
-        display: none;
-    }
-
-    #header .gnb>ul {
-        display: flex;
-        gap: 40px;
-        font-size: 17px;
-    }
-
-    #header .gnb>ul>li>a {
-        display: block;
-        line-height: 80px;
-        white-space: nowrap;
-        color: #fff;
-    }
-
-    #header .gnb>ul>li {
-        position: relative;
-    }
-
-    #header .gnb>ul>li ul {
-        position: absolute;
-        top: 72px;
-        left: 50%;
-
-        transform: translate(-50%, 16px);
-
+      #header .gnb {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
         background: #fff;
-        border: 1px solid #b5936f;
-        border-radius: 8px;
-        overflow: hidden;
-
-        opacity: 0;
-        visibility: hidden;
-
+        z-index: 9998;
         transition: 0.4s;
     }
 
-    #header .gnb>ul>li:hover ul {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-50%, 0);
+    #header.on .gnb {
+        right: 0;
     }
+     #header .gnb>ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #header .gnb>ul>li>a {
+        line-height: 60px;
+        padding: 0 24px;
+        color: #b5936f;
+    }
+
+    /* 서브메뉴 모바일용 */
+    #header .gnb>ul>li ul {
+        position: static;
+        transform: none;
+        opacity:1;
+        visibility: visible;
+        border: none;
+        display: none;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    
+    }
+
 
     #header .gnb>ul>li ul a {
-        display: block;
-        padding: 0 24px;
-        white-space: nowrap;
-        text-align: center;
-        line-height: 40px;
-        font-size: 14px;
+        color: #333;
+        text-align: left;
+        padding-left: 40px;
+      
     }
-
-    #header .gnb>ul>li ul a:hover {
-        background: #fff;
-        color: #b5936f;
+#header .gnb>ul>li:hover ul {
+    transform: translateY(0);
+    
+}
+    /* 모바일 버튼 보이기 */
+    #header .mbtn {
+       display: flex;
+    width: 30px;
+    height: 22px;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
     }
 
 
@@ -354,7 +361,9 @@
 
     }
 
-
+.main_visual .wheel {
+    display: none;
+}
 }
 
 .main_menu .swiper-wrapper {
